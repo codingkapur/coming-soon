@@ -9,8 +9,8 @@ html {
   font-size: 14px;
 }
 body {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   background-image: url(images/bg-stars.svg);
   background-color: hsl(235, 16%, 14%);
   position: relative;
@@ -116,15 +116,15 @@ body {
     bottom: 0;
     left: 0;
     z-index: -1;
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh;
+    width: 100vw; */
     background-image: url(images/pattern-hills.svg);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
   }
   .main-heading {
-    margin-top: 8rem;
+    margin-top: 4rem;
     font-size: 1.7rem;
   }
   .countdown-section {
