@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 14px;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/bg-stars.svg);
+  background-color: hsl(235, 16%, 14%);
+  position: relative;
+}
+.hills-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/pattern-hills.svg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+.container {
+  height: 100vh;
+  width: 90%;
+  max-width: 767px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-heading {
+  color: #fff;
+  letter-spacing: 6px;
+  margin-top: 6rem;
+  text-align: center;
+}
+.countdown-section {
+  margin-top: -12rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 1rem;
+}
+
+.countdown-sub-section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.countdown-top-overlay {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 75px;
+  width: 150px;
+  background-color: hsla(236, 21%, 26%, 1);
+  border-radius: 5px;
+  border-bottom: 1px solid hsla(236, 21%, 26%, 0.4);
+}
+.countdown-top {
+  height: 75px;
+  width: 150px;
+  background-color: hsla(240, 20%, 9%, 0.2);
+  border-radius: 5px;
+  border-bottom: 1px solid hsla(236, 21%, 26%, 0.2);
+  z-index: 1;
+  position: relative;
+}
+.countdown-top::after {
+  content: "";
+  height: 12px;
+  width: 6px;
+  border-radius: 0px 12px 12px 0px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  bottom: -6px;
+}
+.countdown-bottom {
+  height: 75px;
+  width: 150px;
+  background-color: hsl(236, 21%, 26%);
+  border-radius: 5px;
+  box-shadow: 0 8px 0px rgba(0, 0, 0, 1);
+  position: relative;
+}
+.countdown-bottom::after {
+  content: "";
+  height: 12px;
+  width: 6px;
+  border-radius: 12px 0px 0px 12px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  top: -7px;
+  right: 0;
+}
+.number {
+  position: absolute;
+  font-size: 6rem;
+  top: 18px;
+  left: 25px;
+  color: hsl(345, 95%, 68%);
+}
+@media screen and (max-width: 700px) {
+  .hills-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(images/pattern-hills.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+  .main-heading {
+    margin-top: 8rem;
+    font-size: 1.7rem;
+  }
+  .countdown-section {
+    padding: 0;
+  }
+  .countdown-top-overlay {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 37.5px;
+    width: 75px;
+    background-color: hsla(236, 21%, 26%, 1);
+    border-radius: 5px;
+    border-bottom: 1px solid hsla(236, 21%, 26%, 0.4);
+  }
+  .countdown-top {
+    height: 37.5px;
+    width: 75px;
+    background-color: hsla(240, 20%, 9%, 0.2);
+    border-radius: 5px;
+    border-bottom: 1px solid hsla(236, 21%, 26%, 0.2);
+    z-index: 1;
+    position: relative;
+  }
+  .countdown-top::after {
+    content: "";
+    height: 8px;
+    width: 4px;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+  }
+  .countdown-bottom {
+    height: 37.5px;
+    width: 75px;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 5px;
+    box-shadow: 0 8px 0px rgba(0, 0, 0, 1);
+    position: relative;
+  }
+  .countdown-bottom::after {
+    content: "";
+    height: 8px;
+    width: 4px;
+    border-radius: 8px 0px 0px 8px;
+    background-color: #000;
+    display: block;
+    position: absolute;
+    top: -4px;
+    right: 0;
+  }
+  .number {
+    position: absolute;
+    font-size: 3rem;
+    top: 9px;
+    left: 12px;
+    color: hsl(345, 95%, 68%);
+  }
+  .section-subtitle {
+    font-size: 0.8rem;
+    text-align: center;
+    color: hsl(237, 18%, 59%);
+    letter-spacing: 4px;
+  }
+}
+.social-section {
+  margin-bottom: 5rem;
+}
+.fab {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: hsl(237, 18%, 59%);
+}
+.fab:hover {
+  color: hsl(345, 95%, 68%);
+}
+.section-subtitle {
+  text-align: center;
+  color: hsl(237, 18%, 59%);
+  letter-spacing: 4px;
+}
+@media screen and (max-width: 360px){
+  .main-heading {
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+
+  }
+  .countdown-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    align-items: center;
+  }
+  .days-subtitle {
+    grid-column: 2/ span 1;
+    grid-row: 1/ span 1;
+  }
+  .hours-subtitle {
+    grid-column: 2/ span 1;
+    grid-row: 2/ span 1;
+  }
+  .minutes-subtitle {
+    grid-column: 2/ span 1;
+    grid-row: 3/ span 1;
+  }
+  .seconds-subtitle {
+    grid-column: 2/ span 1;
+    grid-row: 4/ span 1;
+  }
+}
